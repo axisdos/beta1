@@ -331,204 +331,50 @@ document.getElementById("status").innerHTML = '<div style="text-align:center;"><
 
 <h2 id=5>The difference between Googlebot and the Google index</h2>
 <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-send.png" alt="Googlebot and Google servers"/>
-<p><strong>Googlebot</strong></p>
-<ul>
-<li>Googlebot retrieves content from the web.
-<li>Googlebot does not judge the content in anyway, it only retrieves it.
-<li>The only concerns Googlebot has is "Can I access this content?" and "Is there any further content that I can access?"
-</ul> 
-<p><strong>The Google index</strong></p>
-<ul>
-<li>The Google index takes the content it receives from Googlebot and uses it to rank pages
-</ul>
-<p>The first step of being ranked by Google is to be retrieved by Googlebot.</p>
+Let's be honest: the heart rate monitor on your Apple Watch sucks. That's probably why you're here anyway. For people with heart conditions such as Arrhythmia, it's important to keep track of your heart rate. It is even more crucial to have a device that can accurately record these data. Unfortunately, the Apple Watch is not one of them.
 
-<h2 id=6>Ensuring Googlebot can see your pages</h2>
+With reports of inaccuracy, missing data, and fail to monitor heart rate at a certain time, many users are on the verge of returning their Apple Watch.
 
-<p>Since Googlebot is the way Google updates their index, it is essential that Googlebot can see your pages.</p>
-<p>The fundamental first questions a webmaster should ask are...</p>
+Before you do that, though, it doesn't hurt to follow a few simple tricks below to get the heart rate monitor on the Apple Watch to work again or at least a bit better than before. I hope these fixes will help.
+
+<img class="aligncenter wp-image-13077 size-full" src="https://www.cydiageeks.com/wp-content/uploads/2018/01/watchos-4-heart-rate-screen.jpg" alt="" width="380" height="454" />
+<h2>Unreliable Heart Rate Reading</h2>
+When going on a long, some will expect <a href="https://www.cydiageeks.com/fix-iphone-activity-app-not-updating-apple-watch.html" target="_blank" rel="noopener">the activity app</a> to show an in-depth chart of their exercises and heart rate reading upon returning. It turns out; there was not enough heart rate data being recorded in the Activity app.
+
+This is a known issue that Apple sometimes addresses. Fixing this problem shouldn't be too complicated.
+
+Make sure you're not wearing your Apple Watch too loosely. This can affect the sensor in the back. Before a workout, check the band and tighten it. When the exercise is over, you can lose it up a bit. In addition to tightening your Apple Watch, you should also clean the sensor (and the back) so that it can give a better result.
+<h2>Activity App Not Recording Heart Rate</h2>
+Yes, you can expect to have this problem where the Activity app will not record your heart rate AT ALL. Sure, the Apple Watch still measure your current heart rate, but when you tap "Done" the app doesn't log it.
+
+If the heart rate is not being recorded on your Apple Watch:
 <ol>
-<li>Can Googlebot "see" my pages?
-<li>Can Googlebot access all my content and links completely?
-<li>Can Googlebot access all of my page resources?
+ 	<li>On your iPhone, open the Watch app</li>
+ 	<li>Go to My Watch &gt; Privacy</li>
+ 	<li>Enable Heart Rate and Fitness Tracking</li>
 </ol>
-<p>Let's look at each of those closer...</p>
-<h2 id=7>1. Can Googlebot "see" my pages?</h2>
-<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-see.png" alt="Googlebot looking at a webpage"/>
-<p>To get an idea of what Google sees from your site do the following Google search...</p>
-<div class=code>
-<p>site:yourwebsite.com</p>
-</div>
-<p>By putting "site:" infront of your domain name you will be requesting Google to list the pages Google has indexed for your site.</p>
-<p>Tip: Make sure there is no space between "site:" and your domain name when you do this. Here is an example using this site...</p>
-<div class=code>
-<p>site:varvy.com</p>
-</div>
-<p>If you see less than the amount of pages that you would expect, you will likely need to ensure that you are not blocking Googlebot with your <a href="/robottxt.html">robots.txt file</a> (the robots.txt file is discussed further down this page).</p>
+<img class="aligncenter wp-image-13076 size-full" src="https://www.cydiageeks.com/wp-content/uploads/2018/01/apple-watch-privacy-settings.jpg" alt="" width="500" height="373" />
 
-<h2 id=8>2. Can Googlebot access all my content and links completely?</h2>
-<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-understand.png" alt="Googlebot confused by webpage"/>
-<p>The next step is to ensure Google is seeing your content and links correctly.</p>
-<p>Just because Googlebot can see your pages does not mean that Google has a perfect picture of exactly what those pages are.</p>
-<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-access-1.png" alt="Googlebot looking at webpage"/>
-<p>Google bot does not see a website the same way as humans do. In the above image there is a webpage with one image on it. Humans can see the image, but what Googlebot sees is only the code calling that image.</p>
-<p>Googlebot may be able to access that webpage (the html file), but not be able to access the image found on that webpage for various reasons.</p>
-<p>In that scenario the Google index will not include that image, meaning that Google has an incomplete understanding of your webpage.</p>
-<h2 id=9>How Googlebot "sees" a webpage</h2>
-<p>Googlebot does not see complete web pages, it only sees the individual components of that page.</p>
-<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-access-overview.png" alt="Googlebot looking at files"/>
-<p>If any of those components are not accessible to Googlebot, it will not send them to the Google index.</p>
-<p>To use our earlier example, here is Googlebot seeing a webpage (the html and css) but not seeing the image.</p>
-<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-access-2.png" alt="Googlebot can not access all resources"/>
-<p>It isn't just images. There are many pieces to a webpage. For Google to be able to rank your webpages optimally, Google needs the complete picture.</p> 
-<p>There are many scenarios where Googlebot might not be able to access web content, here are a few common ones.</p>
-<ul>
-<li>Resource blocked by robots.txt
-<li>Page links not readable or incorrect
-<li>Over reliance on Flash or other technology that web crawlers may have issues with
-<li>Bad HTML or coding errors
-<li>Overly complicated dynamic links
-</ul>
-<p>Most of these things can be quickly checked by using the <a href="/">Google guidelines tool</a>.</p>
-<p>If you have a Google account use the "fetch and render" tool found in the <a href="https://www.google.com/webmasters/tools/">Google search console</a>. This tool will provide you with a live example of exactly what Google sees for an individual page.</p>
+Also, turn off Power Saving Mode from the Workout setting page.
+<h2>Heart Rate Inconsistency</h2>
+Sometimes you record your heart rate twice, and they both show a completely different result. There have been a few cases where the quality of your heart rate can vary. Even Apple confirmed that the Apple Watch wouldn't be able to show an accurate heart rate every time.
 
-<h2 id=10>3. Can Googlebot access all of my page resources?</h2>
-<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-blocked.png" alt="Googlebot blocked from resource files"/>
-<p>If CSS and javascript files are blocked by your robots.txt file then it can cause some severe misunderstandings about your webpage content (much worse than just a missing image).</p>
-<p>It is increasingly true that a webpage may actually be different, or have different content if the page resources are not loaded.</p>
-<p>An example to illustrate this would be a mobile page that uses CSS or javascript to determine what to show depending on what device is looking at the page. If Googlebot can not access the CSS or Javascript of that page, it may not realize the page can be mobile.</p>
-<p>In this scenario and others like it, Google will "see" your page, and may even understand it, but it may not know it enough to realize that it can be ranked in many other scenarios than what the HTML alone is presenting.</p>
-<p>This can also be checked for using the <a href="/">Google guidelines tool</a>.</p>
+At this point, there is no specific solution to this. What you can do is try again and again until the readings are similar to each other.
 
+<strong>Note:</strong> Some Apple Watch users experienced poor heart rate quality after updating to watchOS 4.
+<h2>Heart Rate Sensor Not Working</h2>
+<img class="aligncenter wp-image-13075 size-full" src="https://www.cydiageeks.com/wp-content/uploads/2018/01/apple-watch-light-sensor.png" alt="" width="640" height="464" />
 
-<h2 id=11>Can I control Googlebot?</h2>
-<p>Yes.</p>
-<p>Googlebot follows the instructions it receives via the robots.txt standards and even has advanced ways to control it that are Google specific.</p>
-<p>Some ways you can control Googlebot are...</p>
-<ul>
-<li>Using a robots.txt file 
-<li>Including robot instructions in the metadata of your webpages
-<li>Including robot instructions in your headers
-<li>Using sitemaps
-<li>Using Google search console
-</ul>
-<p>The most common way by far is using the the robots.txt file</p>
+If the Apple Watch does not measure your heart rate due to issues with the sensor, there are a few things you need to do.
+<ol>
+ 	<li>Check to see if the green LED light on the sensor is visible.</li>
+ 	<li>Are you wearing your Apple Watch tight enough?</li>
+ 	<li>Turn on Wrist Detection from the Settings page.</li>
+ 	<li>Are there anything on your wrist that could affect the performance of your Apple Watch's sensor?</li>
+</ol>
+The watch may display an unreliable data, but when it shows nothing at all, then we have a serious problem. If you believe this has to do something with the hardware, please contact Apple.
 
-<h2 id=12>What is a robots.txt file?</h2>
-<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/robots-googlebot.png" alt="Googlebot and robots.txt file"/>
-<p>The robots.txt file controls how search engine spiders like Googlebot see and interact with your webpages.</p>
-<p>In short, a robots.txt file tells Googlebot what to do when it visits your pages by listing files and folders that you do not want Googlebot to access.</p>
-<p>Learn more about it in my guide to the <a href="/robottxt.html">robots.txt file</a>.</p>
-<p>To see your robots.txt file (or to see if you have one) you can enter a url (your homepage for example) in the tool below and it will show you it right here on this page.</p>
-
-<form action="javascript:ajax_post();" class="form">
-<input class="search" id="url" name="url" type="text" value="enter url" onfocus="if (this.value=='enter url') this.value='';" /> 
-<input type="submit" onClick="javascript:ajax_post();" value="Go" class="button"> 
-</form>
-<div class=block>
-<div id="status" style="font-size:75%;overflow:auto;max-height:200px;"></div>
-</div>
-<p>Here are a few resources from Google that speak of robot instructions:</p>
-<ul>
-<li><a href="https://support.google.com/webmasters/answer/6062608">robots.txt file</a>
-<li><a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_txt">Technical overview of how Google handles robots.txt</a>
-<li><a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag">Robots meta tags and headers</a>
-</ul>
-
-<h2 id=13>Sitemaps and Googlebot</h2>
-<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-sitemap.png" alt="Googlebot in map"/>
-<p>Sitemaps are a way that you can help Googlebot understand your website, or as Google says...</p>
-<p>"A sitemap is a file where you can list the web pages of your site to tell Google and other search engines about the organization of your site content. Search engine web crawlers like Googlebot read this file to more intelligently crawl your site."</p>
-
-<p>Google <a href="https://support.google.com/webmasters/answer/156184">states</a> that sitemaps are best used in certain scenarios, specifically...</p>
-<ul>
-<li>Your site is really large.
-<li>Your site has a large archive of content pages that are isolated or well not linked to each other.
-<li>Your site is new and has few external links to it. 
-<li>Your site uses rich media content, is shown in Google News, or uses other sitemaps-compatible annotations.
-</ul>
-
-<p>Sitemaps are being used for many things now, but as far as Googlebot goes, sitemaps basically create a list of urls and other data that Googlebot may use as guidance when visiting your webpages.</p>
-
-<p>Google explains how to <a href="https://support.google.com/webmasters/answer/183668?ref_topic=4581190">build sitemaps here</a>.</p>
-
-<h2 id=14>Googlebot and the Google search console</h2>
-<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/google-console-crawl-stats.png" alt="graphs in tool showing Googlebot activity"/>
-<p>Another place you can control Googlebot is Google search console.</p>
-<p>If Googlebot is accessing your web server too fast, you can <a href="https://support.google.com/webmasters/answer/48620?ref_topic=6002454">change the crawl rate</a>.</p>
-<p>You can also see an overview of how Googlebot is accessing your website, test your robots.txt, see Googlebot <a href="https://support.google.com/webmasters/answer/35120?ref_topic=2446029">crawl errors</a>, and perform "fetch and render" requests which will help you understand how Google is seeing your webpages.</p>
-<p>
-
-<h2 id=15>How many Googlebots / Google webcrawlers are there?</h2>
-
-<p>There are nine different types of Google webcrawlers.</p>
-<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-bunch-page.png" alt="Nine different Googlebots"/>
-<ul>
-<li>Googlebot (Google Web search)
-<li>Google Smartphone
-<li>Google Mobile (Feature phone)
-<li>Googlebot Images
-<li>Googlebot Video
-<li>Googlebot News
-<li>Google Adsense
-<li>Google Mobile Adsense
-<li>Google Adsbot (landing page quality check)
-</ul>
-
-<p>If you want details on each, make sure to visit the <a href="https://support.google.com/webmasters/answer/1061943">Google crawlers</a> help page provided by Google (It lists details about each webcrawler it uses).
-
-<h2 id=16>What is the Googlebot User-agent?</h2>
-<p>Since there are several Googlebots, there are actualy several Googlebot User-agents, let's look at the main ones:</p>
-
-<p><strong>Googlebot (Google web search)</strong></p>
-<p><small>User-agent names: <strong>Googlebot</strong></small></p>
-<div class=code>
-<p><small>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</small></p>
-</div>
-
-<p><strong>Googlebot Smartphone</strong></p>
-<p><small>User-agent names: <strong>Googlebot</strong></small></p>
-<div class=code>
-<p><small>Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1.4 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</small></p>
-</div>
-
-<p><strong>Googlebot Image</strong></p>
-<p><small>User-agent names: <strong>Googlebot-Image (Googlebot)</strong></small></p>
-<div class=code>
-<p><small>Googlebot-Image/1.0</small></p>
-</div>
-
-<p><strong>Googlebot Video</strong></p>
-<p><small>User-agent names: <strong>Googlebot-Video (Googlebot)</strong></small></p>
-<div class=code>
-<p><small>Googlebot-Video/1.0</small></p>
-</div>
-
-<p>The <a href="https://support.google.com/webmasters/answer/1061943">Google crawlers</a> help page provides User-agent information about all of the Google webcrawlers and is the place you should look for the most updated and reliable information.
-
-<h2 id=17>Googlebot and languages / locations</h2>
-<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-language.png" alt="Googlebot saying hello in different languages"/>
-<p>If your pages show different languages or content depending on the location or language of the request, Googlebot may not always see all your content (they recommend using <a href="https://support.google.com/webmasters/answer/189077">hreflang</a>).</p>
-<p>But this article is about Googlebot, and what Googlebot has started doing for language and location based content is interesting.</p>
-<p>Let's take a look...</p>
-<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/location-language-googlebot.png" alt="Users with different languages or locations"/>
-<p>When users are visiting your page and you have a location or language based solution for different content then a user in Italy will see the Italian content and a user in America will see English content.</p>
-<p>Googlebot is based in America, so how does that work? How will Googlebot see that Italian content?</p>
-<h2 id=18>Locale-aware crawling by Googlebot</h2>
-<p>Googlebot employs two main techniques (that Google tells us about) to create locale-aware crawling...</p>
-<ul>
-<li><strong>Geo-distributed crawling:</strong> Googlebot appears to be using IP addresses based outside the USA, in addition to the longstanding IP addresses Googlebot uses that appear to be based in the USA.
-<li><strong>Language-dependent crawling:</strong> Googlebot crawls with an Accept-Language field set in the HTTP header.
-</ul>
-<p>So in other words, Googlebot employs methods to crawl the web as a user from anywhere, but (and this is a big "but"), Google still recommends using <a href="https://support.google.com/webmasters/answer/189077">hreflang</a>.</p>
-
-<p>Always check the <a href="https://support.google.com/webmasters/answer/6144055">locale-aware Googlebot crawling</a> page in the Google official help pages to make decisions!.</p>
-
-<h2 id=19>Finding Official Google help pages</h2>
-<p>Most of the links in this article go to the official Google help pages.</p>
-<p>A good way to see everything that Google has said about Googlebot (or any other subject) is to use the "Ask Google" tool on this site. It searches official Google documentation only.</p>
-<p>Here are the results for Googlebot - <a href="https://varvy.com/search.html?cx=017100771179242959276%3Asykk9nl5rh0&amp;cof=FORID%3A11&amp;q=googlebot">Googlebot articles from Google</a>.</p>
-
+If the Apple Watch isn't the perfect fit for you, there are <a href="https://www.cydiageeks.com/best-apple-watch-alternatives-affordable-iphone-users.html" target="_blank" rel="noopener">other alternatives</a> that deserve some attention.
 <br><div class=go><hr>
 <!-- varvy-end-article-728 -->
 <ins class="adsbygoogle varvy-end"
