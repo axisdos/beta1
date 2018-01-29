@@ -1,460 +1,610 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Meetup is a free responsive single page bootstrap template by designerdada.com">
-  <meta name="author" content="Akash Bhadange">
-  <title>Meetup: Free Responsive One Page Bootstrap Template</title>
 
-  <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/themify-icons.css" rel="stylesheet">
-  <link href='css/dosis-font.css' rel='stylesheet' type='text/css'>
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <![endif]-->
-    </head>
-    <body id="page-top" data-spy="scroll" data-target=".side-menu">
-      <nav class="side-menu">
-        <ul>
-          <li class="hidden active">
-            <a class="page-scroll" href="#page-top"></a>
-          </li>
-          <li>
-            <a href="#home" class="page-scroll">
-              <span class="menu-title">Home</span>
-              <span class="dot"></span>
-            </a>
-          </li>
-          <li>
-            <a href="#speakers" class="page-scroll">
-              <span class="menu-title">Speakers</span>
-              <span class="dot"></span>
-            </a>
-          </li>
-          <li>
-            <a href="#tickets" class="page-scroll">
-              <span class="menu-title">Buy Tickets</span>
-              <span class="dot"></span>
-            </a>
-          </li>
-          <li>
-            <a href="#schedule" class="page-scroll">
-              <span class="menu-title">Schedule</span>
-              <span class="dot"></span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="container-fluid">
-        <!-- Start: Header -->
-        <div class="row hero-header" id="home">
-          <div class="col-md-7">
-            <img src="img/meetup-logo.png" class="logo">
-            <h1>Attend the most awaited Conference of 2015</h1>
-            <h3>to start you up with your business!</h3>
-            <h4>20<sup>th</sup> to 22<sup>nd</sup>  October, 2015</h4>
-            <a href="#" class="btn btn-lg btn-red">Buy Tickets Now <span class="ti-arrow-right"></span></a>
+<!DOCTYPE html><html lang="en" itemscope itemtype="http://schema.org/Article"><head><style>@font-face{font-family:'v';src:url('data:application/font-woff2;charset=utf-8;base64,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')format('woff2'),url('/v.woff') format('woff');font-weight:normal;font-style:normal;}
+*, *:before, *:after {box-sizing:inherit;}
+body{background-color:#fff;}
+html{box-sizing:border-box;font-family:'v',sans-serif;font-weight:normal;font-style:normal;font-size:16px;line-height:1.58;letter-spacing:-.003em;text-rendering:optimizeLegibility;-webkit-font-smoothing: antialiased;color: rgba(0,0,0,.8);}
+@media(min-width:30em){html{font-size:130%;}}
+@media(min-width:60em){html{font-size:135%;}}
+@media(min-width:120em){html{font-size:160%}}
+img{max-width:100%;height:auto;border:0;}
+svg{overflow:hidden;}
+a{color:#0d47a1;text-decoration:underline;}
+nav{font-family:'v',sans-serif;padding-top:10px}
+@media(min-width:40em){nav{padding-top:25px}}
+h1{font: 230%/1 'v',sans-serif;padding:1em 0 .5em 0;margin:0;}
+@media(min-width:40em){h1{font-size:260%;padding:1.75em 0 .7em 0;margin:0;}}
+@media(min-width:60em){h1{font-size:280%;}}
+@media(min-width:75em){h1{font-size:300%;}}
+@media(min-width:120em){h1{font-size:320%;padding:1.75em 0 .8em 0;}}
+h2{font: 220%/1 'v',sans-serif;padding:2em 0 .75em 0;margin:0;}
+h3{font: 160%/1 'v',sans-serif;padding:1.3em 0 .6em 0;margin:0;color:#222;}
+hr{border: 0;height: 0;border-top: 1px solid rgba(33, 33, 33, 0.1);border-bottom: 1px solid rgba(255, 255, 255, 0.1);padding-bottom:10px;}
+nav a{font-size:15px;text-decoration:none;color:#444;border:0}
+@media(min-width:40em){nav a{font-size:18px;}}
+li a{line-height:1.8;}
+@media(min-width:60em){li a{line-height:1.2;}}
+.varvy-articles-top{display:inline-block;width:728px;height:90px}
+.varvy-end{display:inline-block;width:728px;height:90px}
+.varvy-side{display:inline-block;width:120px;height:600px}
+@media(min-width:80em){.varvy-side{display:inline-block;width:160px;height:600px}}
+.top{height:55px;padding:0;margin:0;}
+@media(min-width:40em){.top{height:85px;}}
+.topcon, .con{max-width:100%;margin:0 auto;}
+@media(min-width:80em){.topcon, .con{max-width:90%;}}
+@media(min-width:90em){.topcon, .con{max-width:80%;}}
+@media(min-width:120em){.topcon, .con{max-width:75%;}}
+.in{animation-name: bounceIn;}
+.ani{animation-fill-mode:both;animation-duration:0.5s;}.right{animation-name:right;}.left{animation-name:left;}.fadein{animation-name:fadein;}
+.go{display:none;}.hide{display:inline;}
+@media(min-width:60em){.go{display:inline;}.hide{display:none;}}
+.logo{vertical-align:middle;margin:0 1em;}
+@media(min-width:75em){.logo{margin-left:0em;}}
+.topad{float:right;padding-top:1.3em}
+.block{margin:0;}
+@media(min-width:40em){.block{margin:0;box-shadow: 0 3px 3px 0 rgba(0,0,0,0.15);}}
+@media(min-width:60em){.block{margin:0 .1em;}}
+.intro{text-align:center;padding:0 1.2em;}
+.pad{font-family:'v',sans-serif;font-size:.8em;margin-top:.5em;padding-bottom:2em;letter-spacing:.03em;}
+@media(min-width:40em){.pad{margin-top:0em;padding-bottom:2em;}}
+@media(min-width:120em){.pad{margin-top:.5em;padding-bottom:3em;}}
+.date{text-align:right;color:#999;font-size:70%;}
+.svgc{position:relative;height:0;width:100%;padding:0;padding-bottom:100%;}
+.svgd{padding-bottom: 52.5%}
+.scale{position:absolute;height:100%;width:100%;left:0;top:0;}
+.tab{outline:none;}
+.circle{border-radius:50%;}
+.vert{vertical-align:middle;}
+.rs{padding-bottom:.5em;}
+.spontext{font-size:65%;text-align:right;padding-right:.5em;}
+.clear{clear:both;}
+@media(min-width:60em){.column{float:left;}}
+.new{max-width:99%;padding:1em 1.5em;}
+@media(min-width:40em){.new{max-width:85%;padding:2em;}}
+@media(min-width:80em){.new{max-width:70%;padding:0 4em 0 3em;}}
+@media(min-width:90em){.new{max-width:70%}}
+.side{display:none;}
+@media(min-width:79em){.side{display:inline;width:25%;padding-top:3em;}}
+@media(min-width:90em){.side{max-width:30%;}}
+.sidebump{padding-left:5.5em;padding-right:1em}
+.nudge{padding-left:3em;padding-right:0}
+@media(min-width:100em){.nudge{padding-left:5.5em;padding-right:1em}}
+.sidecenter{text-align:center;padding:0;margin:0;}
+.spons{padding-right:.3em;}
+.footmenu{text-align:center;padding-bottom:1em;}
+.code{font: 110%/1.5 monospace;background:#49535A;margin:2.5em 0;padding:1.5em .5em 1.5em 2em;overflow:auto;max-width:100%;color:#F7F8F8;letter-spacing:.02em;border-left: solid 4px #C7CDD1;}
+a:hover{text-decoration:none;}
+.skiptocontent a {font-size:80%;padding:2px;position:absolute;top:-40px;left:0px;color:white;z-index:100;}.skiptocontent a:focus{position:absolute;left:0px;top:0px;font-size:80%;color:#fff;background:#222;outline:0;}
+@keyframes bounceIn {0%{opacity:0;transform:scale(.995);}}
+@keyframes left {0% {transform:translateX(-300px);}100%{transform:translateX(0px);}}
+@keyframes right {0% {transform:translateX(300px);}100%{transform:translateX(0px);}}
+@keyframes up {0% {transform:translateY(300px);}100%{transform:translateX(0px);}}
+</style><meta name=robots content=noodp><meta name=robots content=noydir><meta name=viewport content="width=device-width, initial-scale=1">
 
-          </div>
-          <div class="col-md-5 hidden-xs">
-            <img src="img/rocket.png" class="rocket animated bounce">
-          </div>
-        </div>
-        <!-- End: Header -->
-      </div>
-      <div class="container">
-        <!-- Start: Desc -->
-        <div class="row me-row content-ct">
-          <h2 class="row-title">Why This Event Is Super Cool?</h2>
-          <div class="col-md-4 feature">
-            <span class="ti-ticket"></span>
-            <h3>Buy Early Bird Tickets</h3>
-            <p>Super cool discounts if you purchase early bird tickets now. Limited tickets available with some awesome perks and goodies!</p>
-          </div>
-          <div class="col-md-4 feature">
-            <span class="ti-microphone"></span>
-            <h3>Expert Speakers</h3>
-            <p>Best in class expert speakers who have extensive knowledge of the topic. All speakers are curated by the panel of experts.</p>
-          </div>
-          <div class="col-md-4 feature">
-            <span class="ti-world"></span>
-            <h3>People around the globe!</h3>
-            <p>Meet the people attending this event around the globe. This will be the best opportunity to meet and greet people from your industry.</p>
-          </div>
-        </div>
-        <!-- End: Desc -->
+<meta itemprop="name headline" content="Googlebot - A guide to the Google webcrawler">
+<meta itemprop="datePublished" content="2015-10-14"/>
+<meta itemprop="description" content="An in-depth guide to the Google webcrawler known as Googlebot and how it crawls the web to find pages.">
+<meta itemprop="image" content="https://varvy.com/images/googlebot.png">
+<meta name=description content="An in-depth guide to the Google webcrawler known as Googlebot and how it crawls the web to find pages.">
+<title>Googlebot - A guide to the Google webcrawler</title>
+<link rel="canonical" href="https://varvy.com/googlebot.html" />
 
-        <!-- Start: Speakers -->
-        <div class="row me-row content-ct speaker" id="speakers">
-          <h2 class="row-title">Meet the Speakers</h2>
-          <div class="col-md-4 col-sm-6 feature">
-            <img src="img/speaker-1.png" class="speaker-img">
-            <h3>Simon Collins</h3>
-            <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things...</p>
-            <ul class="speaker-social">
-              <li><a href="#"><span class="ti-facebook"></span></a></li>
-              <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-              <li><a href="#"><span class="ti-linkedin"></span></a></li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-sm-6 feature">
-            <img src="img/speaker-2.png" class="speaker-img">
-            <h3>Stephanie Troeth</h3>
-            <p>Stephie is a user experience researcher and designer. In over 15 years of working on the web, she has worn many hats, including a product lead for a tech startup in publishing...</p>
-            <ul class="speaker-social">
-              <li><a href="#"><span class="ti-facebook"></span></a></li>
-              <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-              <li><a href="#"><span class="ti-linkedin"></span></a></li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-sm-6 feature">
-            <img src="img/speaker-3.png" class="speaker-img">
-            <h3>Harry Roberts</h3>
-            <p>Harry is a freelance designer, developer, writer, speaker and front-end architect from the UK, previously working as Senior UI Developer for Sky. He Tweets at...</p>
-            <ul class="speaker-social">
-              <li><a href="#"><span class="ti-facebook"></span></a></li>
-              <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-              <li><a href="#"><span class="ti-linkedin"></span></a></li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-sm-6 feature">
-            <img src="img/speaker-4.png" class="speaker-img">
-            <h3>Geri Coady</h3>
-            <p>Harry is a freelance designer, developer, writer, speaker and front-end architect from the UK, previously working as Senior UI Developer for Sky. He Tweets at...</p>
-            <ul class="speaker-social">
-              <li><a href="#"><span class="ti-facebook"></span></a></li>
-              <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-              <li><a href="#"><span class="ti-linkedin"></span></a></li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-sm-6 feature">
-            <img src="img/speaker-5.png" class="speaker-img">
-            <h3>Andy Budd</h3>
-            <p>Harry is a freelance designer, developer, writer, speaker and front-end architect from the UK, previously working as Senior UI Developer for Sky. He Tweets at...</p>
-            <ul class="speaker-social">
-              <li><a href="#"><span class="ti-facebook"></span></a></li>
-              <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-              <li><a href="#"><span class="ti-linkedin"></span></a></li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-sm-6 feature">
-            <img src="img/speaker-6.png" class="speaker-img">
-            <h3>Christian Lauke</h3>
-            <p>Harry is a freelance designer, developer, writer, speaker and front-end architect from the UK, previously working as Senior UI Developer for Sky. He Tweets at...</p>
-            <ul class="speaker-social">
-              <li><a href="#"><span class="ti-facebook"></span></a></li>
-              <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-              <li><a href="#"><span class="ti-linkedin"></span></a></li>
-            </ul>
-          </div>
-        </div>
-        <!-- End: Speakers -->
-      </div>
+<style>.form {width:100%;margin:50px auto;}.noun {text-decoration:none;}
+.search {width:50%;font-size:90%;color:#999;padding:.5em 1em;background:#fff;border:2px solid #bdbdbd;}
+.button {font-size:90%;position:relative;padding:.5em 1em;border:2px solid #e0e0e0;background-color:#eee;color:#777;-webkit-appearance: none;}
+.button:hover  {background-color:#f5f5f5;color:#555;border:2px solid #999;}.column.half { width: 50%; }</style>
 
-      <!-- Start: Tickets -->
-      <div class="container-fluid tickets" id="tickets">
-        <div class="row me-row content-ct">
-          <h2 class="row-title">Buy Tickets</h2>
-          <div class="col-md-4 col-sm-6 col-md-offset-2">
-            <h3>Early Bird Ticket</h3>
-            <p class="price">$399</p>
-            <p>All days entry pass for all the events.</p>
-            <a href="#" class="btn btn-lg btn-red">Buy <small>(6 remaining)</small></a>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <h3>Workshop Pass</h3>
-            <p class="price">$199</p>
-            <p>Entry pass for each workshop</p>
-            <a href="#" class="btn btn-lg btn-red">Buy <small>(42 remaining)</small></a>
-          </div>
-        </div>
-      </div>
-      <!-- End: Tickets -->
+<script>
+function ajax_post(){
+    
+    var hr = new XMLHttpRequest();
+    
+    var url = "robo.php";
+    var input = document.getElementById("url").value;
+    
+    var vars = "url="+input;
+    hr.open("POST", url, true);
+    
+    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var return_data = hr.responseText;
+			document.getElementById("status").innerHTML = return_data;
+	    }
+    }
+    
+    hr.send(vars); // Actually execute the request
+document.getElementById("status").innerHTML = '<div style="text-align:center;"><p><img src=/lil.gif></p><br></div>'; 
+    
+    document.getElementById("goaway").innerHTML = '';
+}
+</script>
 
-      <!-- Start: Schedule -->
-      <div class="container">
-        <div class="row me-row schedule" id="schedule">
-          <h2 class="row-title content-ct">Event Schedule</h2>
-          <div class="col-md-12">
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#day-1" aria-controls="home" role="tab" data-toggle="tab">Day 01 <small class="hidden-xs">(20<sup>th</sup>, October)</small></a></li>
-              <li role="presentation"><a href="#day-2" aria-controls="profile" role="tab" data-toggle="tab">Day 02 <small class="hidden-xs">(21<sup>st</sup>, October)</small></a></li>
-              <li role="presentation"><a href="#day-3" aria-controls="messages" role="tab" data-toggle="tab">Day 03 <small class="hidden-xs">(22<sup>nd</sup>, October)</small></a></li>
-            </ul>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9611596420113268",
+    enable_page_level_ads: true
+  });
+</script>
 
-            <!-- Tab panes -->
-            <div class="tab-content">
-              <div role="tabpanel" class="tab-pane fade in active" id="day-1">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="media">
-                      <div class="media-left">
-                        <a href="#">
-                          <img class="media-object" src="img/speaker-1.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">10am to 10:30am</h4>
-                        <h5>THE DESIGNER’S GUIDE TO BEING ESSENTIAL</h5>
-                        <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things. </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="media">
-                      <div class="media-left">
-                        <a href="#">
-                          <img class="media-object" src="img/speaker-2.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">10:45am to 11:30am</h4>
-                        <h5>MODULAR DESIGN AT WORK</h5>
-                        <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things. </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="media">
-                      <div class="media-left">
-                        <a href="#">
-                          <img class="media-object" src="img/speaker-3.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">12:00pm to 01:30pm</h4>
-                        <h5>AN INTRODUCTION TO TOUCH AND POINTER EVENTS</h5>
-                        <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things. </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="media">
-                      <div class="media-left">
-                        <a href="#">
-                          <img class="media-object" src="img/speaker-4.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">02:00pm to 03.30pm</h4>
-                        <h5>WEB FONTS PERFORMANCE</h5>
-                        <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things. </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div role="tabpanel" class="tab-pane fade" id="day-2">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="media">
-                      <div class="media-left">
-                        <a href="#">
-                          <img class="media-object" src="img/speaker-4.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">10am to 10:30am</h4>
-                        <h5>MAKING DOG FOOD PART OF A BALANCED DIET</h5>
-                        <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things. </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="media">
-                      <div class="media-left">
-                        <a href="#">
-                          <img class="media-object" src="img/speaker-3.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">10:45am to 11:30am</h4>
-                        <h5>HANDS-ON WEB AUDIO</h5>
-                        <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things. </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="media">
-                      <div class="media-left">
-                        <a href="#">
-                          <img class="media-object" src="img/speaker-2.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">12:00pm to 01:30pm</h4>
-                        <h5>CONVERSION RATE OPTIMIZATION TECHNIQUES IN ECOMMERCE</h5>
-                        <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things. </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="media">
-                      <div class="media-left">
-                        <a href="#">
-                          <img class="media-object" src="img/speaker-1.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">02:00pm to 03.30pm</h4>
-                        <h5>PAPER PROTOTYPING APPLICATIONS</h5>
-                        <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things. </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div role="tabpanel" class="tab-pane fade" id="day-3">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="media">
-                      <div class="media-left">
-                        <a href="#">
-                          <img class="media-object" src="img/speaker-6.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">10am to 10:30am</h4>
-                        <h5>THE DESIGNER’S GUIDE TO BEING ESSENTIAL</h5>
-                        <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things. </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="media">
-                      <div class="media-left">
-                        <a href="#">
-                          <img class="media-object" src="img/speaker-5.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">10:45am to 11:30am</h4>
-                        <h5>THE DESIGNER’S GUIDE TO BEING ESSENTIAL</h5>
-                        <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things. </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="media">
-                      <div class="media-left">
-                        <a href="#">
-                          <img class="media-object" src="img/speaker-3.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">12:00pm to 01:30pm</h4>
-                        <h5>THE DESIGNER’S GUIDE TO BEING ESSENTIAL</h5>
-                        <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things. </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="media">
-                      <div class="media-left">
-                        <a href="#">
-                          <img class="media-object" src="img/speaker-4.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">02:00pm to 03.30pm</h4>
-                        <h5>THE DESIGNER’S GUIDE TO BEING ESSENTIAL</h5>
-                        <p>Simon is designer and partner at Fictivekin and has worked in a variety of situations for bands, record labels, governments, polar explorers, and most other things. </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End: Schedule -->
+</head><body><div class=top role="banner"><div class=skiptocontent><a href=#maincontent>skip to main content</a></div><div class=topcon><div class="go topad"><a href="http://shareasale.com/r.cfm?b=768144&amp;u=869072&amp;m=41388&amp;urllink=&amp;afftrack=top" rel="nofollow" class=nodec><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUUAAAAeCAYAAAC7SgzdAAAGDUlEQVR42u1cgY3bMAz8ETxCRvAIGcELtPAIHiEbeASP4BE8gkbICBnBfQMiIBzEHlRFrtvcAUI+DilRFHWm6Hy+BEEQBEEQBEEQBEGowo+fP6fv9nhn+xIEQfhHCXH+bj1eB3LL6e3eZyJFQRD+2QzRCFGkKAjCx8PIS6QoCIIgUvxbpYrteP0S5Pf3zK0/5hZbf8XSnEjR65fbMn63cPRL2r2RL+4n+Xw5ArjBxugy17uGQYnjP+P6bJnPVyMk0LH1DmZn41LRBhvWbMa2WjxcGLjOoZ3NfO98EiluzkOYJbaxihTLyXZrSIr7WT6vIEXqFwxWG6sRcKzgbNjXQUCe3w+Zk+zb2DW7Hm0evq6L+r1x/t65PsjXarYY0BtcXyMZWnY353RFih9AipzgLEbWmJX1HpFehRTx5CJSvCApcntuR2tCikS9PSly2SGOZzb0np2J3GQOg892s5/Mc8SNZXogmw1QuOFMSb83bzOD7R1+FglnsX5snHjtCXazeaFfRrD1RjbmkDlVTPaa8cVM1gvtuiVxdjMfQN84t56QohuLFWOOpbHIZTgpHrJevDh+hPir3zvoL4xXJ6lyCR3l7JonT2qsdcdnRkhNj89cLsSJj9HZYySAMbMp12ivLYodjSgpmn7UHeKYCwTXFPVnICePFINl3GBT79RZzfYlvu/qSJHPKxLJkgTYzNbV8d/rsCmOERwSxdrY6szZZGyt5+Qkc4d+rY8h/r2UkGK0+cXGZP4siEUuw0lxAt3VKWmMsc+pwd4xf1lc3rMxZfGK4wNMPp0Tq8vDKbd/OynCJAeieyYp7k5W9cQHAGTzYn8otzpOH1EfMocsksDqcg8CcC4oZ2RXcXym8wL9nQYWjofHYzxe43tu15ybsyM7OkSwFpLig4xZ5E8ei1yGkaKz1k+88Tg34JvdwGr2DotLrNdivONaOjZQUoyvhBjrSPERB1jPIEWn4UL0nn5moTvUtcUipPi0ICHHPtjg5TXFQzftAx9kIdFUkCKdV0XND/0/Q38rkETIZZXEN9ksE8coqCmG4zVtmJ3yMbk/eSxymT+sK8+wl6eU7FG2wN4KUnTl98xaTs5aUlIkxFhNioM9cb5CpgikN0I90/Thqxe0brE7BL1hi/1tvj4nRRJE9neAce3aXkGKdF6+PoeRTEIWPT50STbnDGu50375nAPzBWYt4IPZ6qhkkxf6k8cil+GkyDI7O7Z6JbECe9uSIuqXkyLyRHgHKa5M1wL+ZFLEusjskWKm7rfaIheQ4t1p/QmkOHnjlwRP6bxqSNHWI63JIfFBRkc2C86RE1QhKW61xMP9yWORybyRFDd7T3xEbLk8KWKdeqwiRTy6ITAtPYUUMYXH1J7ro5MmokePxA1IMQApDg2+kkPnVUmKQ0LoizdHOCoTH0LWSTLF80mR+5PHIpepJ0V8b8BMnttydVIkhEg36J5pC37tBVoXDZszuqEZKfLN3pu+yfnFeH78tUJ5A1IMTnawg9zSiBT5vMpJAwv5K5I6PhUndjlFeDrnxclmhnakyP3JY5HL1JIi+tKfB7elLSlijZOvJY7LCbE8UxzTlgn6BY3FLLMlKdrRLHfUQ1K0IjhmuHi3g/4wI71nAu1WQYqHTRPYtEKNrUvkMCAGUpDGf7/rCufFSYPXFV9elo83XhgP1/UGT1AZCfTWB/qhHSlyf/JY5DKVpIiyi3Ozrt879aSIa4/xsDFSBEKsIEXC0vg0sKweyWuERmrJHYvWFNPsNslS9gwJhaT4PXv9Zb4712f0HxV2P6wlfb4cmzobM3ldPJLL1YuivOnfCuY1G7l5ZRISOys5Co/e8RvtwvVIfBa8TMLsTvoZ0v+zTv/3mcyPjsn9yWORy5TbZvq2/pnE5uXEVdXecWwyuQA+d/aQGw8byRRN5/6xv5KDC8lluQz5rKH99baz6+3ndb5vuP75dreSuXr8tbQTM3z9dJggCEJyihUpCoLwScCjsL2f7JsLp5Ki1VxEioIgXIAU16Q+vBghnv3TYXNSqPVk9t/+wo4gCIIgCIIgCIIgCIIgCIIgCMJ/gl9BhRnWzeIyQgAAAABJRU5ErkJggg=="</a></div>
 
-      <!-- Start: Footer -->
-      <div class="container-fluid footer">
-        <div class="row contact">
-          <div class="col-md-6 contact-form">
-            <h3 class="content-ct"><span class="ti-email"></span> Contact Form</h3>
-            <form class="form-horizontal" data-toggle="validator" role="form">
-              <div class="form-group">
-                <label for="name" class="col-sm-3 control-label">Name<sup>*</sup></label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="name" placeholder="John Doe" required>
-                  <div class="help-block with-errors pull-right"></div>
-                  <span class="form-control-feedback" aria-hidden="true"></span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="email" class="col-sm-3 control-label">Email<sup>*</sup></label>
-                <div class="col-sm-9">
-                  <input type="email" class="form-control" id="email" placeholder="you@youremail.com" required>
-                  <div class="help-block with-errors pull-right"></div>
-                  <span class="form-control-feedback" aria-hidden="true"></span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="message" class="col-sm-3 control-label">Your Message<sup>*</sup></label>
-                <div class="col-sm-9">
-                  <textarea id="message" class="form-control" rows="3" required></textarea>
-                  <div class="help-block with-errors pull-right"></div>
-                  <span class="form-control-feedback" aria-hidden="true"></span>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset-3 col-sm-9">
-                  <button type="submit" id="submit" name="submit" class="btn btn-yellow pull-right">Send <span class="ti-arrow-right"></span></button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="col-md-4 col-md-offset-1 content-ct">
-            <h3><span class="ti-twitter"></span> Twitter Feed</h3>
-            <p>Lorem <a href="#">#Ipsum</a> is a dummy text used as a text filler in designs. This is just a dummy text. via <a href="#">@designerdada</a> </p>
-            <hr>
-            <p>Lorem Ipsum is a <a href="#">#dummy</a> text used as a text filler in designs. This is just a dummy text. via <a href="#">@designerdada</a> </p>
-            <hr>
-            <p>Lorem Ipsum is a <a href="#">#dummy</a> text used as a text filler in designs. This is just a dummy text. via <a href="#">@designerdada</a> </p>
-          </div>
-        </div>
-        <div class="row footer-credit">
-          <div class="col-md-6 col-sm-6">
-            <p>&copy; 2015, <a href="http://www.designerdada.com">DesignerDada.com</a> | All rights reserved.</p>
-          </div>
-          <div class="col-md-6 col-sm-6"> 
-            <ul class="footer-menu">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms &amp; Condition</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- End: Footer -->
+<nav><a href="/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAAV1BMVEX///+VyOyByITK4/Wp0vDA48Hr9fvv+PCcy+3Q6tHy+P2Jy4yRz5Oh1qOiz+7f8eDk8fqZ0puw3bKw1vHE4PTQ5/f4/P6p2au44LrI58nX7tjn9ej3/Pfv4affAAAApElEQVR42t2SyQ6DMAwFAyEbCQ103/7/O3vAxiovQVzbuVkaafQkq59BNzPeVpWxYfqacj2wolWNMyvdjpLdWXJm5rlRerWE2ygN5BhxYFMgJ75Z0bgpkRTotoVNhpxEdyelBdcSGUrCkZwblIQs87HETOTcS6XV/IQlIfJ6LK3mD7WSzI9uKXn4PZr/kNJFFchfpZMqMkEJCQZKCJaQ3kvpD/gA5qQFlI8k1AIAAAAASUVORK5CYII=" alt="varvy.com" class=logo width="30" height="30"/>seo</a> &nbsp;<a href=/pagespeed/>speed</a> &nbsp;<a href=/mobile/>mobile</a></nav></div></div><div class=con><div class="ani in"><article role=main><div class="intro">
 
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="js/jquery.min.js"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/jquery.easing.min.js"></script>
-      <script src="js/scrolling-nav.js"></script>
-      <script src="js/validator.js"></script>
-      <!-- Google Analytics -->
-      <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<h1 id=maincontent tabindex="-1" class=tab>The Googlebot guide</h1>
+<p class="pad"><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/" itemprop="url"><span itemprop="title">Seo</span></a> > </span>Learn about the Google web crawler named Googlebot</p><p class=date>Updated: <span itemprop="dateModified">May 25th 2016</span></p></div>
+<div class="svgc" style="padding-bottom: 52.5%"><svg class=scale version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1200 630" style="enable-background:new 0 0 1200 630;" xml:space="preserve">
+<g>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#DB3336;stroke-miterlimit:10;" d="M421.8,102.5
+		c-4.2-26.6,8.3-44.5,37.5-54.2c0-3,1.1-5.6,3.2-7.7c-27.2-4.8-55.1,26.5-50.1,62.8"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#F1C119;stroke-miterlimit:10;" d="M454.2,47.9
+		c-0.1,13,9.5,23.5,21.3,23.3c11.9-0.2,21.5-10.9,21.6-23.9c0.1-13-9.5-23.5-21.3-23.3C463.9,24.2,454.2,34.9,454.2,47.9z"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#DB3336;stroke-miterlimit:10;" d="M234.4,150.2
+		c-14.4-22.9-9.7-43.7,13.9-63.2c-1.2-2.7-1.2-5.5-0.1-8.2c-27.4,5.4-41.2,44.2-22.3,75.6"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#F1C119;stroke-miterlimit:10;" d="M296.6,88.2
+		c1.2,14-9.3,26.3-23.4,27.4c-14.1,1.1-26.6-9.4-27.8-23.4c-1.2-14,9.3-26.3,23.4-27.4C283,63.7,295.4,74.2,296.6,88.2z"/>
+	<path style="fill:#FFFFFF;stroke:#5780C1;stroke-miterlimit:10;" d="M278.3,435.6c0.3,8.6,4.9,15.4,10.3,14.6l113.1-16
+		c5.4-0.8,9.7-8.8,9.4-17.4L387,336c-0.3-8.6,15.1-40.4,9.8-39.6l-113.1,16c-5.4,0.8,19,36.4,19.3,45L278.3,435.6z"/>
+	<path style="fill:#FFFFFF;stroke:#44B553;stroke-miterlimit:10;" d="M171.9,260.5c12,50.3,47.4,82.3,79.6,74.1l243.7-62.2
+		c32.2-8.2,49-53.5,37-103.9l0,0c-12-50.3-47.4-82.3-79.6-74.1l-243.7,62.2C176.7,164.8,159.9,210.1,171.9,260.5L171.9,260.5z"/>
+	<path style="fill:#FFFFFF;stroke:#F1C119;stroke-miterlimit:10;" d="M230.5,277c4.1,17.1,23.7,26.8,45.8,21.2l180.1-46
+		c22.1-5.6,36.4-24,32.3-41.1l-3.1-12.9c-4.1-17.1-25-26.5-47.1-20.8l-180.1,46c-22.1,5.6-35,23.6-30.9,40.7L230.5,277z"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#5780C1;stroke:#FFFFFF;stroke-miterlimit:10;" d="M418,220.7
+		c3.8,16,20,25.7,36.1,21.6c16.1-4.1,26.1-20.4,22.2-36.5c-3.8-16-20-25.7-36.1-21.6C424.1,188.4,414.1,204.7,418,220.7z"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" d="M419.8,209.8c2,8.3,9.9,13.3,17.6,11.4
+		c7.8-2,12.4-10.3,10.5-18.5c-2-8.3-9.9-13.3-17.6-11.4C422.5,193.2,417.8,201.5,419.8,209.8z"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" d="M450.1,227.6c1.2,5.1,6.1,8.2,10.9,7c4.8-1.2,7.7-6.3,6.5-11.4
+		c-1.2-5.1-6.1-8.2-10.9-7C451.7,217.4,448.9,222.5,450.1,227.6z"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#5780C1;stroke:#FFFFFF;stroke-miterlimit:10;" d="M239.5,271.8
+		c4.3,18.1,22.6,29,40.9,24.4c18.2-4.7,29.5-23.1,25.2-41.2c-4.3-18.1-22.6-29-40.9-24.4C246.4,235.2,235.2,253.7,239.5,271.8z"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" d="M242.2,260.2c2.2,9.3,11.2,15.1,19.9,12.9
+		c8.8-2.2,14.1-11.6,11.8-21c-2.2-9.3-11.2-15.1-19.9-12.9C245.2,241.5,239.9,250.9,242.2,260.2z"/>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" d="M273.5,286.9c1.1,4.6,5.5,7.4,9.8,6.3
+		c4.3-1.1,6.9-5.7,5.8-10.3c-1.1-4.6-5.5-7.4-9.8-6.3C275,277.7,272.4,282.3,273.5,286.9z"/>
+</g>
+<g>
+	<path style="fill:#FFFFFF;stroke:#F7BB17;stroke-miterlimit:10;" d="M558.6,403.2c0.8-2.7,1.9-5.3,3.4-7.7c3.2,3,6.5,5.9,9.7,8.9
+		c-1.7,3.9-2,8.3-1,12.3c-3.7,2.4-7.3,4.8-11,7.2C557,417.3,556.6,409.9,558.6,403.2z"/>
+</g>
+<g>
+	<path style="fill:#FFFFFF;stroke:#547DBF;stroke-miterlimit:10;" d="M589.6,406c9.9,0.8,19.9,1.6,29.8,2.4
+		c0.5,5.6-0.1,11.4-2.1,16.7c-1.8,4.9-4.9,9.3-9.1,12.5c-3.1-2.9-6.3-5.7-9.4-8.6c3.5-2,6.1-5.4,7.1-9.3c-5.8-0.5-11.5-0.9-17.3-1.4
+		C588.9,414.2,589.3,410.1,589.6,406z"/>
+</g>
+<g>
+	<path style="fill:#FFFFFF;stroke:#34A750;stroke-miterlimit:10;" d="M559.7,423.9c3.7-2.4,7.3-4.8,11-7.2c1,4,3.3,7.7,6.5,10.3
+		c2,1.7,4.3,2.9,6.8,3.6c2.4,0.7,5,0.9,7.6,0.6c2.5-0.2,5-1,7.2-2.2c3.1,2.9,6.3,5.7,9.4,8.6c-3.9,3.1-8.6,5-13.5,5.7
+		c-5.4,0.8-11,0.4-16.2-1.5c-4.1-1.4-7.9-3.7-11-6.7C564.1,432,561.4,428.1,559.7,423.9z"/>
+</g>
+<g>
+	
+		<rect x="102.4" y="457.8" transform="matrix(-6.662621e-003 1 -1 -6.662621e-003 704.3389 281.0733)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" width="220.4" height="65.1"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 -355.1675 771.4868)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="210.7" cy="564.5" rx="7.7" ry="7.7"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 -326.7665 743.6479)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="210.9" cy="536.3" rx="7.7" ry="7.7"/>
+	<polygon style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" points="366.9,555.1 368.5,423.9 246.5,380.1 243.8,600.4 	"/>
+	
+		<rect x="180.1" y="458.3" transform="matrix(-6.662621e-003 1 -1 -6.662621e-003 783.1304 203.8413)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" width="220.4" height="65.1"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 -278.4483 849.755)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="288.5" cy="565" rx="7.7" ry="7.7"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 -250.0473 821.9161)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="288.7" cy="536.8" rx="7.7" ry="7.7"/>
+	<polygon style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" points="444.6,555.6 446.2,424.4 324.2,380.6 321.5,600.9 	"/>
+	
+		<rect x="258.9" y="458.8" transform="matrix(-6.662621e-003 1 -1 -6.662621e-003 862.9028 125.6476)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" width="220.4" height="65.1"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 -200.7739 928.9977)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="367.2" cy="565.6" rx="7.7" ry="7.7"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 -172.373 901.1588)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="367.4" cy="537.3" rx="7.7" ry="7.7"/>
+	<polygon style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" points="523.3,556.1 524.9,424.9 403,381.1 400.3,601.5 	"/>
+	
+		<rect x="336.5" y="458.5" transform="matrix(-6.662621e-003 1 -1 -6.662621e-003 940.7479 47.7076)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" width="220.4" height="65.1"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 -123.3514 1006.3259)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="444.9" cy="565.3" rx="7.7" ry="7.7"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 -94.9504 978.487)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="445" cy="537" rx="7.7" ry="7.7"/>
+	<polygon style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" points="601,555.8 602.6,424.6 480.6,380.8 477.9,601.2 	"/>
+	
+		<rect x="414.3" y="459.1" transform="matrix(-6.662621e-003 1 -1 -6.662621e-003 1019.5394 -29.5245)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" width="220.4" height="65.1"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 -46.6322 1084.5941)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="522.6" cy="565.8" rx="7.7" ry="7.7"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 -18.2312 1056.7552)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="522.8" cy="537.6" rx="7.7" ry="7.7"/>
+	<polygon style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" points="678.7,556.3 680.3,425.1 558.4,381.3 555.6,601.7 	"/>
+	
+		<rect x="493" y="459.6" transform="matrix(-6.662621e-003 1 -1 -6.662621e-003 1099.3118 -107.7181)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" width="220.4" height="65.1"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 31.0421 1163.8368)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="601.3" cy="566.3" rx="7.7" ry="7.7"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 59.4431 1135.9979)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="601.5" cy="538.1" rx="7.7" ry="7.7"/>
+	<polygon style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" points="757.4,556.9 759.1,425.7 637.1,381.8 634.4,602.2 	"/>
+	
+		<rect x="572.7" y="459.2" transform="matrix(-6.662621e-003 1 -1 -6.662621e-003 1179.239 -187.7885)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" width="220.4" height="65.1"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 110.5808 1243.2333)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="681.1" cy="566" rx="7.7" ry="7.7"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 138.9818 1215.3944)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="681.3" cy="537.7" rx="7.7" ry="7.7"/>
+	<polygon style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" points="837.2,556.5 838.8,425.3 716.8,381.5 714.1,601.9 	"/>
+	
+		<rect x="650.5" y="459.8" transform="matrix(-6.662621e-003 1 -1 -6.662621e-003 1258.0304 -265.0206)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" width="220.4" height="65.1"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 187.3 1321.5015)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="758.8" cy="566.5" rx="7.7" ry="7.7"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 215.701 1293.6626)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="759" cy="538.3" rx="7.7" ry="7.7"/>
+	<polygon style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" points="914.9,557 916.5,425.9 794.6,382 791.9,602.4 	"/>
+	
+		<rect x="729.2" y="460.3" transform="matrix(-6.662621e-003 1 -1 -6.662621e-003 1337.8029 -343.2142)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" width="220.4" height="65.1"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 264.9744 1400.7441)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="837.5" cy="567" rx="7.7" ry="7.7"/>
+	
+		<ellipse transform="matrix(6.662621e-003 -1 1 6.662621e-003 293.3754 1372.9053)" style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" cx="837.7" cy="538.8" rx="7.7" ry="7.7"/>
+	<polygon style="fill:#FFFFFF;stroke:#5D5E5E;stroke-miterlimit:10;" points="993.7,557.6 995.3,426.4 873.3,382.5 870.6,602.9 	"/>
+</g>
+<g>
+	<g>
+		<path id="path2998" style="fill:#587FC0;" d="M690.9,243.7h-38.1V255h27c-1.3,15.9-14.5,22.6-27,22.6c-15.9,0-29.8-12.5-29.8-30.1
+			c0-17.1,13.3-30.3,29.9-30.3c12.8,0,20.4,8.2,20.4,8.2l7.9-8.2c0,0-10.2-11.3-28.7-11.3c-23.6,0-41.9,19.9-41.9,41.4
+			c0,21.1,17.2,41.7,42.5,41.7c22.2,0,38.5-15.2,38.5-37.8C691.6,246.4,690.9,243.7,690.9,243.7L690.9,243.7z"/>
+	</g>
+	<g>
+		<path id="path3000" style="fill:#DB3336;" d="M722.2,235.5c-15.6,0-26.9,12.2-26.9,26.5c0,14.5,10.9,26.9,27,26.9
+			c14.6,0,26.6-11.2,26.6-26.6C749,244.6,735,235.5,722.2,235.5L722.2,235.5z M722.3,246c7.7,0,15,6.2,15,16.2
+			c0,9.8-7.3,16.2-15,16.2c-8.5,0-15.2-6.8-15.2-16.3C707,252.9,713.7,246,722.3,246L722.3,246z"/>
+	</g>
+	<g>
+		<path id="path3005" style="fill:#F3C217;" d="M780.5,235.5c-15.6,0-26.9,12.2-26.9,26.5c0,14.5,10.9,26.9,27,26.9
+			c14.6,0,26.6-11.2,26.6-26.6C807.4,244.6,793.4,235.5,780.5,235.5L780.5,235.5z M780.7,246c7.7,0,15,6.2,15,16.2
+			c0,9.8-7.3,16.2-15,16.2c-8.5,0-15.3-6.8-15.3-16.3C765.4,252.9,772.1,246,780.7,246L780.7,246z"/>
+	</g>
+	<g>
+		<path id="path3007" style="fill:#587FC0;" d="M837.8,235.5c-14.4,0-25.6,12.6-25.6,26.7c0,16.1,13.1,26.7,25.4,26.7
+			c7.6,0,11.7-3,14.6-6.5v5.3c0,9.2-5.6,14.7-14,14.7c-8.2,0-12.3-6.1-13.7-9.5l-10.3,4.3c3.6,7.7,11,15.7,24,15.7
+			c14.3,0,25.2-9,25.2-27.8v-48h-11.2v4.5C848.8,238,844.1,235.5,837.8,235.5L837.8,235.5z M838.9,246c7,0,14.3,6,14.3,16.3
+			c0,10.4-7.2,16.2-14.4,16.2c-7.7,0-14.8-6.2-14.8-16.1C823.9,252.1,831.3,246,838.9,246L838.9,246z"/>
+	</g>
+	<g>
+		<path id="path3011" style="fill:#DB3336;" d="M913.2,235.5c-13.5,0-24.9,10.8-24.9,26.7c0,16.8,12.7,26.8,26.2,26.8
+			c11.3,0,18.2-6.2,22.4-11.7l-9.2-6.1c-2.4,3.7-6.4,7.4-13.1,7.4c-7.5,0-11-4.1-13.1-8.1l35.8-14.9l-1.9-4.4
+			C932,242.6,923.9,235.5,913.2,235.5L913.2,235.5z M913.7,245.7c4.9,0,8.4,2.6,9.9,5.7l-23.9,10C898.6,253.7,906,245.7,913.7,245.7
+			L913.7,245.7z"/>
+	</g>
+	<g>
+		<path id="path3015" style="fill:#45B754;" d="M871.2,287.4H883v-78.7h-11.8V287.4z"/>
+	</g>
+	<g>
+		<rect x="881" y="292.1" style="fill:none;" width="65.4" height="32.7"/>
+		
+			<text transform="matrix(1 0 0 1 881.0369 315.2676)" style="fill:#5D5E5E; font-family:'v'; font-size:34.7329px;">bot</text>
+	</g>
+</g>
+</svg></div>
+<div class="column new">
 
-      ga('create', 'UA-29231762-2', 'auto');
-      ga('send', 'pageview');
-      </script>
-    </body>
-    </html>
+<h2 id=1>What is Googlebot?</h2>
+
+<ul>
+<li>Googlebot is the webcrawler used by Google.
+<li>It is used by Google to find and retrieve webpages.
+<li>The information gathered by Googlebot is used to update the Google index.
+</ul>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-defined.png" alt="Googlebot"/>
+
+<p>Googlebot visits billions of webpages and is constantly visiting pages all over the web.</p>
+
+<div class=go>
+<br>
+<hr>
+<!-- varvy-articles-top -->
+<ins class="adsbygoogle varvy-articles-top"
+     data-ad-client="ca-pub-9611596420113268"
+     data-ad-slot="2859203779"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<hr>
+</div>
+
+<h2 id=2>What is a webcrawler?</h2>
+<ul>
+<li>Web crawlers (also known as bots, robots or spiders) are a type of software designed to follow links, gather information and then send that information somewhere.
+</ul>
+
+
+
+<h2 id=3>What does Googlebot do?</h2>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-functions.png" style="padding-top:1em;" alt="Googlebot scanning for and listing links"/>
+<ul>
+<li>Googlebot retrieves the content of webpages (the words, code and resources that make up the webpage).
+<li>If the content it retrieves has links to other things, that is noted.
+<li>It then sends the information to Google.
+</ul>
+ 
+<h2 id=4>Googlebot and your website</h2>
+<p>The information that Googlebot sends back to Google computers updates the Google index.</p>
+<p>The Google index is where webpages are compared and ranked.</p>
+<ul>
+<li>In order for your webpages to be found in Google, they must be visible to Googlebot.
+<li>In order for your webpages to rank optimally, all webpage resources must be accessible by Googlebot.
+</ul>
+
+<h2 id=5>The difference between Googlebot and the Google index</h2>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-send.png" alt="Googlebot and Google servers"/>
+<p><strong>Googlebot</strong></p>
+<ul>
+<li>Googlebot retrieves content from the web.
+<li>Googlebot does not judge the content in anyway, it only retrieves it.
+<li>The only concerns Googlebot has is "Can I access this content?" and "Is there any further content that I can access?"
+</ul> 
+<p><strong>The Google index</strong></p>
+<ul>
+<li>The Google index takes the content it receives from Googlebot and uses it to rank pages
+</ul>
+<p>The first step of being ranked by Google is to be retrieved by Googlebot.</p>
+
+<h2 id=6>Ensuring Googlebot can see your pages</h2>
+
+<p>Since Googlebot is the way Google updates their index, it is essential that Googlebot can see your pages.</p>
+<p>The fundamental first questions a webmaster should ask are...</p>
+<ol>
+<li>Can Googlebot "see" my pages?
+<li>Can Googlebot access all my content and links completely?
+<li>Can Googlebot access all of my page resources?
+</ol>
+<p>Let's look at each of those closer...</p>
+<h2 id=7>1. Can Googlebot "see" my pages?</h2>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-see.png" alt="Googlebot looking at a webpage"/>
+<p>To get an idea of what Google sees from your site do the following Google search...</p>
+<div class=code>
+<p>site:yourwebsite.com</p>
+</div>
+<p>By putting "site:" infront of your domain name you will be requesting Google to list the pages Google has indexed for your site.</p>
+<p>Tip: Make sure there is no space between "site:" and your domain name when you do this. Here is an example using this site...</p>
+<div class=code>
+<p>site:varvy.com</p>
+</div>
+<p>If you see less than the amount of pages that you would expect, you will likely need to ensure that you are not blocking Googlebot with your <a href="/robottxt.html">robots.txt file</a> (the robots.txt file is discussed further down this page).</p>
+
+<h2 id=8>2. Can Googlebot access all my content and links completely?</h2>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-understand.png" alt="Googlebot confused by webpage"/>
+<p>The next step is to ensure Google is seeing your content and links correctly.</p>
+<p>Just because Googlebot can see your pages does not mean that Google has a perfect picture of exactly what those pages are.</p>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-access-1.png" alt="Googlebot looking at webpage"/>
+<p>Google bot does not see a website the same way as humans do. In the above image there is a webpage with one image on it. Humans can see the image, but what Googlebot sees is only the code calling that image.</p>
+<p>Googlebot may be able to access that webpage (the html file), but not be able to access the image found on that webpage for various reasons.</p>
+<p>In that scenario the Google index will not include that image, meaning that Google has an incomplete understanding of your webpage.</p>
+<h2 id=9>How Googlebot "sees" a webpage</h2>
+<p>Googlebot does not see complete web pages, it only sees the individual components of that page.</p>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-access-overview.png" alt="Googlebot looking at files"/>
+<p>If any of those components are not accessible to Googlebot, it will not send them to the Google index.</p>
+<p>To use our earlier example, here is Googlebot seeing a webpage (the html and css) but not seeing the image.</p>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-access-2.png" alt="Googlebot can not access all resources"/>
+<p>It isn't just images. There are many pieces to a webpage. For Google to be able to rank your webpages optimally, Google needs the complete picture.</p> 
+<p>There are many scenarios where Googlebot might not be able to access web content, here are a few common ones.</p>
+<ul>
+<li>Resource blocked by robots.txt
+<li>Page links not readable or incorrect
+<li>Over reliance on Flash or other technology that web crawlers may have issues with
+<li>Bad HTML or coding errors
+<li>Overly complicated dynamic links
+</ul>
+<p>Most of these things can be quickly checked by using the <a href="/">Google guidelines tool</a>.</p>
+<p>If you have a Google account use the "fetch and render" tool found in the <a href="https://www.google.com/webmasters/tools/">Google search console</a>. This tool will provide you with a live example of exactly what Google sees for an individual page.</p>
+
+<h2 id=10>3. Can Googlebot access all of my page resources?</h2>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-blocked.png" alt="Googlebot blocked from resource files"/>
+<p>If CSS and javascript files are blocked by your robots.txt file then it can cause some severe misunderstandings about your webpage content (much worse than just a missing image).</p>
+<p>It is increasingly true that a webpage may actually be different, or have different content if the page resources are not loaded.</p>
+<p>An example to illustrate this would be a mobile page that uses CSS or javascript to determine what to show depending on what device is looking at the page. If Googlebot can not access the CSS or Javascript of that page, it may not realize the page can be mobile.</p>
+<p>In this scenario and others like it, Google will "see" your page, and may even understand it, but it may not know it enough to realize that it can be ranked in many other scenarios than what the HTML alone is presenting.</p>
+<p>This can also be checked for using the <a href="/">Google guidelines tool</a>.</p>
+
+
+<h2 id=11>Can I control Googlebot?</h2>
+<p>Yes.</p>
+<p>Googlebot follows the instructions it receives via the robots.txt standards and even has advanced ways to control it that are Google specific.</p>
+<p>Some ways you can control Googlebot are...</p>
+<ul>
+<li>Using a robots.txt file 
+<li>Including robot instructions in the metadata of your webpages
+<li>Including robot instructions in your headers
+<li>Using sitemaps
+<li>Using Google search console
+</ul>
+<p>The most common way by far is using the the robots.txt file</p>
+
+<h2 id=12>What is a robots.txt file?</h2>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/robots-googlebot.png" alt="Googlebot and robots.txt file"/>
+<p>The robots.txt file controls how search engine spiders like Googlebot see and interact with your webpages.</p>
+<p>In short, a robots.txt file tells Googlebot what to do when it visits your pages by listing files and folders that you do not want Googlebot to access.</p>
+<p>Learn more about it in my guide to the <a href="/robottxt.html">robots.txt file</a>.</p>
+<p>To see your robots.txt file (or to see if you have one) you can enter a url (your homepage for example) in the tool below and it will show you it right here on this page.</p>
+
+<form action="javascript:ajax_post();" class="form">
+<input class="search" id="url" name="url" type="text" value="enter url" onfocus="if (this.value=='enter url') this.value='';" /> 
+<input type="submit" onClick="javascript:ajax_post();" value="Go" class="button"> 
+</form>
+<div class=block>
+<div id="status" style="font-size:75%;overflow:auto;max-height:200px;"></div>
+</div>
+<p>Here are a few resources from Google that speak of robot instructions:</p>
+<ul>
+<li><a href="https://support.google.com/webmasters/answer/6062608">robots.txt file</a>
+<li><a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_txt">Technical overview of how Google handles robots.txt</a>
+<li><a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag">Robots meta tags and headers</a>
+</ul>
+
+<h2 id=13>Sitemaps and Googlebot</h2>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-sitemap.png" alt="Googlebot in map"/>
+<p>Sitemaps are a way that you can help Googlebot understand your website, or as Google says...</p>
+<p>"A sitemap is a file where you can list the web pages of your site to tell Google and other search engines about the organization of your site content. Search engine web crawlers like Googlebot read this file to more intelligently crawl your site."</p>
+
+<p>Google <a href="https://support.google.com/webmasters/answer/156184">states</a> that sitemaps are best used in certain scenarios, specifically...</p>
+<ul>
+<li>Your site is really large.
+<li>Your site has a large archive of content pages that are isolated or well not linked to each other.
+<li>Your site is new and has few external links to it. 
+<li>Your site uses rich media content, is shown in Google News, or uses other sitemaps-compatible annotations.
+</ul>
+
+<p>Sitemaps are being used for many things now, but as far as Googlebot goes, sitemaps basically create a list of urls and other data that Googlebot may use as guidance when visiting your webpages.</p>
+
+<p>Google explains how to <a href="https://support.google.com/webmasters/answer/183668?ref_topic=4581190">build sitemaps here</a>.</p>
+
+<h2 id=14>Googlebot and the Google search console</h2>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/google-console-crawl-stats.png" alt="graphs in tool showing Googlebot activity"/>
+<p>Another place you can control Googlebot is Google search console.</p>
+<p>If Googlebot is accessing your web server too fast, you can <a href="https://support.google.com/webmasters/answer/48620?ref_topic=6002454">change the crawl rate</a>.</p>
+<p>You can also see an overview of how Googlebot is accessing your website, test your robots.txt, see Googlebot <a href="https://support.google.com/webmasters/answer/35120?ref_topic=2446029">crawl errors</a>, and perform "fetch and render" requests which will help you understand how Google is seeing your webpages.</p>
+<p>
+
+<h2 id=15>How many Googlebots / Google webcrawlers are there?</h2>
+
+<p>There are nine different types of Google webcrawlers.</p>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-bunch-page.png" alt="Nine different Googlebots"/>
+<ul>
+<li>Googlebot (Google Web search)
+<li>Google Smartphone
+<li>Google Mobile (Feature phone)
+<li>Googlebot Images
+<li>Googlebot Video
+<li>Googlebot News
+<li>Google Adsense
+<li>Google Mobile Adsense
+<li>Google Adsbot (landing page quality check)
+</ul>
+
+<p>If you want details on each, make sure to visit the <a href="https://support.google.com/webmasters/answer/1061943">Google crawlers</a> help page provided by Google (It lists details about each webcrawler it uses).
+
+<h2 id=16>What is the Googlebot User-agent?</h2>
+<p>Since there are several Googlebots, there are actualy several Googlebot User-agents, let's look at the main ones:</p>
+
+<p><strong>Googlebot (Google web search)</strong></p>
+<p><small>User-agent names: <strong>Googlebot</strong></small></p>
+<div class=code>
+<p><small>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</small></p>
+</div>
+
+<p><strong>Googlebot Smartphone</strong></p>
+<p><small>User-agent names: <strong>Googlebot</strong></small></p>
+<div class=code>
+<p><small>Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1.4 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</small></p>
+</div>
+
+<p><strong>Googlebot Image</strong></p>
+<p><small>User-agent names: <strong>Googlebot-Image (Googlebot)</strong></small></p>
+<div class=code>
+<p><small>Googlebot-Image/1.0</small></p>
+</div>
+
+<p><strong>Googlebot Video</strong></p>
+<p><small>User-agent names: <strong>Googlebot-Video (Googlebot)</strong></small></p>
+<div class=code>
+<p><small>Googlebot-Video/1.0</small></p>
+</div>
+
+<p>The <a href="https://support.google.com/webmasters/answer/1061943">Google crawlers</a> help page provides User-agent information about all of the Google webcrawlers and is the place you should look for the most updated and reliable information.
+
+<h2 id=17>Googlebot and languages / locations</h2>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/googlebot-language.png" alt="Googlebot saying hello in different languages"/>
+<p>If your pages show different languages or content depending on the location or language of the request, Googlebot may not always see all your content (they recommend using <a href="https://support.google.com/webmasters/answer/189077">hreflang</a>).</p>
+<p>But this article is about Googlebot, and what Googlebot has started doing for language and location based content is interesting.</p>
+<p>Let's take a look...</p>
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-v="/images/location-language-googlebot.png" alt="Users with different languages or locations"/>
+<p>When users are visiting your page and you have a location or language based solution for different content then a user in Italy will see the Italian content and a user in America will see English content.</p>
+<p>Googlebot is based in America, so how does that work? How will Googlebot see that Italian content?</p>
+<h2 id=18>Locale-aware crawling by Googlebot</h2>
+<p>Googlebot employs two main techniques (that Google tells us about) to create locale-aware crawling...</p>
+<ul>
+<li><strong>Geo-distributed crawling:</strong> Googlebot appears to be using IP addresses based outside the USA, in addition to the longstanding IP addresses Googlebot uses that appear to be based in the USA.
+<li><strong>Language-dependent crawling:</strong> Googlebot crawls with an Accept-Language field set in the HTTP header.
+</ul>
+<p>So in other words, Googlebot employs methods to crawl the web as a user from anywhere, but (and this is a big "but"), Google still recommends using <a href="https://support.google.com/webmasters/answer/189077">hreflang</a>.</p>
+
+<p>Always check the <a href="https://support.google.com/webmasters/answer/6144055">locale-aware Googlebot crawling</a> page in the Google official help pages to make decisions!.</p>
+
+<h2 id=19>Finding Official Google help pages</h2>
+<p>Most of the links in this article go to the official Google help pages.</p>
+<p>A good way to see everything that Google has said about Googlebot (or any other subject) is to use the "Ask Google" tool on this site. It searches official Google documentation only.</p>
+<p>Here are the results for Googlebot - <a href="https://varvy.com/search.html?cx=017100771179242959276%3Asykk9nl5rh0&amp;cof=FORID%3A11&amp;q=googlebot">Googlebot articles from Google</a>.</p>
+
+<br><div class=go><hr>
+<!-- varvy-end-article-728 -->
+<ins class="adsbygoogle varvy-end"
+     data-ad-client="ca-pub-9611596420113268"
+     data-ad-slot="4589092575"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<hr>
+<br>
+<!-- match-article-bottom -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:300px"
+     data-ad-client="ca-pub-9611596420113268"
+     data-ad-slot="9268456576"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><br><p><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/patrick-sexton.jpg" width=50 height=50 alt="Patrick Sexton" class="circle vert" > by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a href="https://plus.google.com/+PatrickSexton" itemprop="url" rel="author"><span itemprop="name">Patrick Sexton</span></a></span></p><br></div>
+</article>
+<aside>
+<div class="column side">
+<div class="" syle="padding-left:5em;padding-right:2em;">
+<h4>Author</h4>
+<p><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/patrick-sexton.jpg" width=50 height=50 alt="Patrick Sexton" class="circle vert" ><br><small><small><span itemprop="author" itemscope itemtype="http://schema.org/Person"><a href="https://plus.google.com/+PatrickSexton" itemprop="url" rel="author"><span itemprop="name">Patrick Sexton</span></a></span></small></small></p><br>
+<h4>WordPress Host</h4><p><a href="http://shareasale.com/r.cfm?b=768144&amp;u=869072&amp;m=41388&amp;urllink=&amp;afftrack=logo" rel="nofollow"><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/wp-logo.png" class=spons alt="WPengine" width=240 height=84></a></p><br>
+<br>
+<br>
+<!-- match-article-side -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-9611596420113268"
+     data-ad-slot="1170380172"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div></aside>
+<div class=clear></div></div>
+
+<div>
+<div role="contentinfo"><p class=footmenu><small><a href="/">Home</a> | <a href="/pagespeed/">Pagespeed</a> | <a href="/mobile/">Mobile</a> | <a href="/toolbox/">Tools</a> | <a href="/about.html">About</a> | <a href="/privacy.html">Privacy</a> | <a href="/sitemap.html">Site Map</a><br><small>Copyright © 2006-2016 Patrick Sexton. All rights reserved.</small></small></p></div></div></div>
+<script>
+        function im() {
+             var vizimgDefer = document.getElementsByTagName('img');
+for (var i=0; i<vizimgDefer.length; i++) {
+if(vizimgDefer[i].getAttribute('data-v')) {
+vizimgDefer[i].setAttribute('src',vizimgDefer[i].getAttribute('data-v'));
+} }
+        }
+        window.onload = im;
+</script>
+<script>
+var fired = false;
+window.addEventListener("scroll", function(){
+if ((document.documentElement.scrollTop != 0 && fired === false) || (document.body.scrollTop != 0 && fired === false)) {
+
+var imgDefer = document.getElementsByTagName('img');
+for (var i=0; i<imgDefer.length; i++) {
+if(imgDefer[i].getAttribute('data-src')) {
+imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+} }
+
+(function() { var ad = document.createElement('script'); ad.type = 'text/javascript'; ad.async = true; ad.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'; var sc = document.getElementsByTagName('script')[0]; sc.parentNode.insertBefore(ad, sc); })();
+
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65832723-1', 'auto');
+  ga('send', 'pageview');
+
+    fired = true;
+  }
+}, true)
+</script></body></html>
