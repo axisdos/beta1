@@ -1740,14 +1740,6 @@ h3 {
     display: inline-block
 }
 
-.buy-info-full img {
-    border-radius: 3px;
-    float: left;
-    height: 40px;
-    margin: -4px 10px 0 0;
-    width: auto
-}
-
 .buy-info-full .btn {
     display: inline-block;
     font-size: 16px;
