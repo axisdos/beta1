@@ -840,124 +840,6 @@
             margin: 0 auto;
             width: 100%
         }
-        
-   .step {
-  position:relative;
-	padding:10px;
-	border-left:5px solid rgb(122, 197, 228);
-	position:relative;
-  margin-left:1em;
-  padding-left:2em;
-}
-.step h2{
-	border-top-right-radius: 1em;
-	border-bottom-right-radius: 1em;
-	border: 3px solid rgb(122, 197, 228);
-  margin:0;
-  text-indent:1em;
-	color:rgb(122, 197, 228);
-  font-weight:normal;
-	font-size:1.3em;
-  margin-left:-1em;
-}
-/* The Balls*/
-.step h2::before{
-  content:attr(data-step-id);
-	border-radius: 2em;
-	background-color: rgb(122, 197, 228);
-	width:2em;
-	height:2em;
-	display:inline-block;
-	position:absolute;
-	left:-1.1em;
-	top:0;
-	text-align:center;
-	line-height:2em;
-	font-size:1.2em;
-  font-weight:normal;
-	color: #EEEEEE;
-  text-indent:0;
-}
-/* Active step: */
-.step.active h2{
-  background-color:rgb(122, 197, 228);
-  color:#FFFFFF;
-  font-weight:bold;
-}
-.step.active h2::before{
-  border-right:3px solid #FFFFFF;
-}
-/* Arrow */
-.step::before{
-  content:"";
-	border:0.8em solid transparent;
-	border-top-color:rgb(122, 197, 228);
-	border-top-width:1.5em;
-	position:absolute;
-	display:inline-block;
-	left:-0.9em;
-	bottom:-0.9em;
-}
-/* Inactive */
-.step.inactive{ border-color:#bbbbbb; }
-.step.inactive::before{ border-top-color:#bbbbbb; }
-.step.inactive h2{ color:#aaaaaa;border-color:#bbbbbb; }
-.step.inactive h2::before{background-color: #bbbbbb;}
-
-/* The last step: */
-[class*='step']:last-of-type{border-color:transparent;}
-[class*='step']:last-of-type::before{content:none;}
-	    .topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
-}
     </style>
  
 </head>
@@ -978,18 +860,7 @@
             </div>
         </div>
     </div>
-	    
-<script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
-	    
+   
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -1280,8 +1151,7 @@ function myFunction() {
         });
         else window.addEventListener('load', loadDeferredStyles);
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>									   
+    <script src="https://cdn.rawgit.com/axisdos/dc248de21d9a24c829ff0aa59f3f370e/raw/17ca1108e35849f48ffe2da2e73c0ab8175c90a2/mobile.js"></script>									   
 </body>
 
 </html>
